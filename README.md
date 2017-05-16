@@ -24,7 +24,7 @@ Add the following to your custom.js file
     bindings: {parentCtrl: '<'},
     controller: function () {
       this.$onInit = function () {
-        angular.element(document.querySelector('md-tabs')).addClass("hide");
+        angular.element(document.querySelector('prm-alma-more-inst md-tabs')).addClass("hide");
       };
     },
     template: '<div class="hide_show_other_institutions_container"><button class="hide_show_other_institutions_button" onclick="hide_show_other_institutions()">Show Libraries</button></div>'
@@ -35,14 +35,14 @@ Add the following to your custom.js file
 
 function hide_show_other_institutions() 
 {
-  if(angular.element(document.querySelector('md-tabs')).hasClass("hide"))
+  if(angular.element(document.querySelector('prm-alma-more-inst md-tabs')).hasClass("hide"))
   {
-    angular.element(document.querySelector('md-tabs')).removeClass("hide");
+    angular.element(document.querySelector('prm-alma-more-inst md-tabs')).removeClass("hide");
     angular.element(document.getElementsByClassName('hide_show_other_institutions_button')).text("Hide Libraries");
   }
   else
   {
-    angular.element(document.querySelector('md-tabs')).addClass("hide");
+    angular.element(document.querySelector('prm-alma-more-inst md-tabs')).addClass("hide");
     angular.element(document.getElementsByClassName('hide_show_other_institutions_button')).text("Show Libraries");
   }
 	
